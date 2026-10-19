@@ -9,7 +9,8 @@ on:
 jobs:
   assemble-debug-apk:
     runs-on: ubuntu-latest
-
+    env:
+      ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
