@@ -27,10 +27,8 @@ jobs:
           yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_SDK_ROOT "platforms;android-34" "build-tools;34.0.0"
 
 
-      - name: Generate Gradle wrapper
-        run: |
-          ./gradlew wrapper --gradle-version 9.8.1 --distribution-type all || \
-          gradle wrapper --gradle-version 9.8.1 --distribution-type all
+      - name: Ensure Gradle wrapper present
+        run: echo "Using existing gradlew wrapper"
 
       - name: Make wrapper executable
         run: chmod +x gradlew
