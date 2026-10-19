@@ -1,0 +1,12 @@
+# Gradle & build output
+.gradle/
+build/
+app/build/
+# Android Studio specific files (if any)
+.idea/
+*.iml
+# Local properties (SDK path)
+local.properties
+# Generated files
+*.apk
+*.ap_
